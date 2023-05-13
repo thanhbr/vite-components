@@ -24,7 +24,7 @@ export const SIDEBAR_MENU_ITEMS = [
     list: [],
   },
   {
-    id: 3,
+    id: 4,
     label: DISPLAY_NAME_MENU.LOADER,
     path: PATH.DRAWER,
     // displayIcon: SIDEBAR_MENU_ICONS.overview,
