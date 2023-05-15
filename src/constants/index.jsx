@@ -2,5 +2,5 @@ export const DISPLAY_NAME_MENU = {
   HOME: "Home",
   BUTTON: "Button",
   DRAWER: "Drawer",
-  LOADER: "Loader",
+  LOADER: "13",
 }
