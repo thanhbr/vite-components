@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {StyledSidebarTitle, StyledSidebarMenuItem} from "./_style";
 import {SIDEBAR_TITLE} from "../../constants/sidebar";
 import {ICONS} from "../../constants/_icons";
+import Text from "../text";
 
 const SidebarTitle = ({...props}) => {
   return (
@@ -28,7 +29,7 @@ const SidebarMenuItem = ({data, size = 'md', ...props}) => {
           // data-single={!haveSubMenu}
           // onClick={handleSubMenuToggle}
         >
-          <span>{data?.label || ''}</span>
+          <Text>{data?.label || ''}</Text>
         </Link>
 
       </div>

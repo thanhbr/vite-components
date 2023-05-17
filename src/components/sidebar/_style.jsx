@@ -24,7 +24,10 @@ export const StyledSidebarTitle = styled.div`
 
 export const StyledSidebarMenuItem = styled.li`
   list-style-type: none;
-  margin-top: 16px;
+  padding: 8px 12px 8px 20px;
+  &:hover {
+    background-color: var(--navs-bg-hover);
+  }
   .sidebar-menu-item {
     color: var(--current-color);
   }

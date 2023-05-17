@@ -25,6 +25,8 @@ code {
   --current-color: #575757;
   --current-hover-color: #e6e8ec;
   --secondary_100: #00081D;
+  --navs-bg-hover: #e5e5ea;
+  --code-text-bg:#f5f5f5;
 
   /*=========== Button =============*/
   --btn-default-bg: #f7f7fa;

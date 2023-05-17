@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from "../../components/button";
-import Text from "../../components/text";
+import Text from "../../../../components/text";
+import Button from "../../../../components/button";
 import styled from "styled-components";
 
 const Basic = () => {

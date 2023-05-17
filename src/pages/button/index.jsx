@@ -1,8 +1,9 @@
 import React from 'react';
 import Button from "../../components/button";
 import Text from "../../components/text";
-import Basic from "./_basic";
-import Appearance from "./_appearance";
+import SubTitle from "./_subTitle";
+import Basic from "./component/basic";
+import Appearance from "./component/appearance";
 
 const ButtonPage = () => {
   return (
@@ -13,8 +14,9 @@ const ButtonPage = () => {
         fontWeight={600}
         style={{margin: '16px 0'}}
       >
-        Button page
+        Button
       </Text>
+      <SubTitle />
 
       <Basic />
       <Appearance />
