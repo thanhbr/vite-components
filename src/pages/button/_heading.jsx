@@ -3,9 +3,10 @@ import Text from "../../components/text";
 import {buttonLayouts} from "./interfaces/_contants";
 import styled from "styled-components";
 
-const SubTitle = () => {
+const Heading = () => {
   return (
-    <StyledSubTitle>
+    <StyledHeading>
+      <Text as={'b'} fontSize={28} classParent={'title'}>Button</Text>
       <Text as={'p'}>Commonly used operating buttons, button combinations, button layouts.</Text>
       <ul className={'subtitle-ul'}>
         {buttonLayouts.map(item => (
@@ -17,13 +18,17 @@ const SubTitle = () => {
           </li>
         ))}
       </ul>
-    </StyledSubTitle>
+    </StyledHeading>
   )
 }
 
-export default SubTitle
+export default Heading
 
-export const StyledSubTitle = styled.div`
+export const StyledHeading = styled.div`
+  padding-top: 16px;
+  .title {
+    margin: 16px 0;
+  }
   .subtitle {
     &-ul {
       list-style-type: circle;

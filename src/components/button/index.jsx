@@ -7,6 +7,7 @@ const Button = ({
         disabled=false, // boolean
         icon, // svg only,
         iconPosition, // front | back
+        classParent,
         ...props
 }) => {
   return (
@@ -14,6 +15,7 @@ const Button = ({
       {...props}
       data-appearance={appearance}
       data-size={size}
+      className={classParent || ''}
     >
       {icon
         ? <div
@@ -36,8 +38,9 @@ const Button = ({
 export default Button
 
 
-export const StyledButton = styled.div`
+export const StyledButton = styled.button`
   height: 36px;
+  border: none;
   border-radius: 6px;
   padding: 8px 12px;
   cursor: pointer;

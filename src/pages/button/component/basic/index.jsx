@@ -1,13 +1,16 @@
 import React from 'react';
+import styled from "styled-components";
 import Text from "../../../../components/text";
 import Button from "../../../../components/button";
-import styled from "styled-components";
+import Frame from "../../../../components/frame";
 
 const Basic = () => {
   return (
     <StyledBasic>
-      <Text as={'p'} fontSize={20} fontWeight={600}>Basic</Text>
-      <Button appearance={'default'}>Default</Button>
+      <Text as={'b'} fontSize={24}>Basic</Text>
+      <Frame className={'btn-basic--frame'}>
+        <Button appearance={'default'}>Default</Button>
+      </Frame>
     </StyledBasic>
   )
 }
@@ -17,7 +20,9 @@ export default Basic
 
 export const StyledBasic = styled.div`
   margin: 16px 0;
-  p {
-    margin-bottom: 16px;
+  .btn-basic {
+    &--frame {
+      padding: 16px;
+    }
   }
 `

@@ -1,5 +1,5 @@
 export const DISPLAY_NAME_MENU = {
-  HOME: "Home",
+  OVERVIEW: "Overview",
   BUTTON: "Button",
   DRAWER: "Drawer",
   LOADER: "13",

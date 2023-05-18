@@ -4,26 +4,28 @@ import styled from "styled-components";
 
 const Text = ({
                 as = 'span',
-                fontSize = 14,
-                fontWeight = 400,
-                lineHeight = 20,
+                color,
+                fontSize,
+                fontWeight,
+                classParent,
                 ...props
 }) => {
   const isLink = as === 'a'
   const Tag = isLink ? (props?.target === '_blank' ? 'a' : Link) : as
-  const styles = {
-    fontSize,
-    fontStyle: as === 'i' ? 'italic' : 'normal',
-    lineHeight: isNaN(lineHeight) ? lineHeight : `${lineHeight}px`,
-  }
 
   return (
-    <StyledText>
+    <StyledText
+      color={color}
+      fontSize={fontSize}
+      fontWeight={fontWeight}
+      className={classParent || ''}
+    >
       <Tag
         {...props}
+        as={as}
         to={isLink ? props?.href || '#' : undefined}
-        style={{...styles, ...props?.style}}
-        data-style={as}
+        className={`text-common ${props?.className || ''}`}
+        style={{...props?.style}}
       >
         {props?.children}
       </Tag>
@@ -33,17 +35,23 @@ const Text = ({
 
 export default Text
 
-export const StyledText = styled.div`
-  color: var(--secondary_100);
-  font-weight: 400;
-  width: fit-content;
-  
-  code[data-style='code'] {
-    color: var(--btn-primary-code);
-    padding: 3px 5px;
-    background: var(--code-text-bg);
-  }
-  b, strong, h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
+const StyledText = styled.div`
+  .text-common {
+    color: ${props => !!props?.color ? props?.color : 'var(--secondary_100)'};
+    font-weight: ${props => !!props?.fontWeight ? props?.fontWeight : 400};
+    font-size: ${props => !!props?.fontSize ? `${props?.fontSize}px` : "14px"};
+    width: fit-content;
+    
+    &[as='code'] {
+      color: var(--btn-primary-code);
+      padding: 3px 5px;
+      background: var(--code-text-bg);
+    }
+    &[as='b'], &[as='strong'], &[as='h1'], &[as='h2'], &[as='h3'], &[as='h4'], &[as='h5'], &[as='h6'] {
+      font-weight: 600;
+    }
+    &[as='i'] {
+      font-style: italic;
+    }
   }
 `
