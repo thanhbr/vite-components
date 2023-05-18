@@ -27,7 +27,18 @@ body {
   --btn-default-bg: #f7f7fa;
   --btn-default-hover-bg: #e5e5ea;
   --btn-primary-bg: #3498ff;
+  --btn-primary-hover-bg: #2589f5;
+  --btn-primary-active-bg: #1675e0;
   --btn-primary-text: #fff;
+  --btn-link-text: #1675e0;
+  --btn-subtle-text: #8e8e93;
+  --btn-subtle-hover-text: #575757;
+  --btn-subtle-hover-bg: #e5e5ea;
+  --btn-ghost-border: #1675e0;
+  --btn-ghost-text: #1675e0;
+  --btn-ghost-hover-border: #0a5dc2;
+  --btn-ghost-hover-text: #0a5dc2;
+
   --btn-primary-code: #e96900;
 
   /*========== Font and typography ==========*/

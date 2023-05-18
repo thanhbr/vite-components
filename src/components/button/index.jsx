@@ -54,7 +54,36 @@ export const StyledButton = styled.button`
   &[data-appearance="primary"] {
     background-color: var(--btn-primary-bg);
     color: var(--btn-primary-text);
+    &:hover {
+      background: var(--btn-primary-hover-bg);
+    }
   }
+  &[data-appearance="link"] {
+    background: transparent;
+    color: var(--btn-link-text);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &[data-appearance="subtle"] {
+    background: transparent;
+    color: var(--btn-subtle-text);
+    &:hover {
+      background: var(--btn-subtle-hover-bg);
+      color: var(--btn-subtle-hover-text);
+    }
+  }
+  &[data-appearance="ghost"] {
+    background: transparent;
+    border: 1px solid var(--btn-ghost-border);
+    color: var(--btn-ghost-text);
+    &:hover {
+      background: var(--btn-ghost-hover-border);
+      color: var(--btn-ghost-hover-text);
+    }
+  }
+  
+  
   &[data-size="fit"] {
     width: fit-content;
   }

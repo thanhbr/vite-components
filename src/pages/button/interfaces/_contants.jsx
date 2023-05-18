@@ -6,9 +6,9 @@ export const buttonLayouts = [
 ]
 
 export const buttonAppearances = [
-  {id: 1, name: 'default', content: 'default button.'},
-  {id: 2, name: 'primary', content: 'Emphasi, guide button.'},
-  {id: 3, name: 'link', content: 'Button like link.'},
-  {id: 4, name: 'subtle', content: 'Weakened button.'},
-  {id: 5, name: 'ghost', content: 'Ghost button, background transparent, place button on background element.'},
+  {id: 1, code: 'default', name: 'Default', content: 'default button.'},
+  {id: 2, code: 'primary', name: 'Primary', content: 'Emphasi, guide button.'},
+  {id: 3, code: 'link', name: 'Link', content: 'Button like link.'},
+  {id: 4, code: 'subtle', name: 'Subtle', content: 'Weakened button.'},
+  {id: 5, code: 'ghost', name: 'Ghost', content: 'Ghost button, background transparent, place button on background element.'},
 ]

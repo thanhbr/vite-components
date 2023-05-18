@@ -2,6 +2,8 @@ import React from 'react';
 import Text from "../../../../components/text";
 import styled from "styled-components";
 import {buttonAppearances} from "../../interfaces/_contants";
+import Frame from "../../../../components/frame";
+import Button from "../../../../components/button";
 
 const Appearance = () => {
   return (
@@ -13,9 +15,19 @@ const Appearance = () => {
       </div>
       <ul className={'btn-appear--list'}>
         {buttonAppearances.map(item => (
-          <li key={item?.id} className={'btn-appear--item'}><Text>'{item?.name || ''}' {item?.content || ''}</Text></li>
+          <li key={item?.id} className={'btn-appear--item'}>
+            <Text>'{item?.code || ''}' {item?.content || ''}</Text>
+          </li>
         ))}
       </ul>
+      <Frame>
+        {buttonAppearances.map(item => (
+          <Button key={item?.id}
+                  appearance={item?.code}
+                  classParent={'btn-appear--atom'}
+          >{item?.name || ''}</Button>
+        ))}
+      </Frame>
     </StyledAppearance>
   )
 }
@@ -36,6 +48,9 @@ export const StyledAppearance = styled.div`
     }
     &--item {
       line-height: 26px;
+    }
+    &--atom {
+      margin-right: 8px;
     }
   }
 `
