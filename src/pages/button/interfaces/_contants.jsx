@@ -12,3 +12,10 @@ export const buttonAppearances = [
   {id: 4, code: 'subtle', name: 'Subtle', content: 'Weakened button.'},
   {id: 5, code: 'ghost', name: 'Ghost', content: 'Ghost button, background transparent, place button on background element.'},
 ]
+
+export const buttonSizes = [
+  {id: 1, code: 'large', name: 'Large', size: 'lg'},
+  {id: 2, code: 'medium', name: 'Medium', size: 'md'},
+  {id: 3, code: 'small', name: 'Small', size: 'sm'},
+  {id: 4, code: 'xsmall', name: 'Xsmall', size: 'xs'},
+]

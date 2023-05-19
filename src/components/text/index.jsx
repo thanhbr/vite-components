@@ -46,6 +46,7 @@ const StyledText = styled.div`
       color: var(--btn-primary-code);
       padding: 3px 5px;
       background: var(--code-text-bg);
+      border-radius: 6px;
     }
     &[as='b'], &[as='strong'], &[as='h1'], &[as='h2'], &[as='h3'], &[as='h4'], &[as='h5'], &[as='h6'] {
       font-weight: 600;

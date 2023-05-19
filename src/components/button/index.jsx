@@ -39,7 +39,6 @@ export default Button
 
 
 export const StyledButton = styled.button`
-  height: 36px;
   border: none;
   border-radius: 6px;
   padding: 8px 12px;
@@ -78,8 +77,7 @@ export const StyledButton = styled.button`
     border: 1px solid var(--btn-ghost-border);
     color: var(--btn-ghost-text);
     &:hover {
-      background: var(--btn-ghost-hover-border);
-      color: var(--btn-ghost-hover-text);
+      border: 1px solid var(--btn-ghost-hover-border);
     }
   }
   
@@ -87,7 +85,24 @@ export const StyledButton = styled.button`
   &[data-size="fit"] {
     width: fit-content;
   }
+  &[data-size="lg"] {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 10px 16px;
+  }
   &[data-size="md"] {
-    width: 60px;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 12px;
+  }
+  &[data-size="sm"] {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 5px 10px;
+  }
+  &[data-size="xs"] {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 2px 8px;
   }
 `
